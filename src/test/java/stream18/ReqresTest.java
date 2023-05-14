@@ -38,6 +38,7 @@ public class ReqresTest {
                 .when()
                 .get("/users/23")
                 .then()
+                .spec(reqresResponseSpec)
                 .statusCode(404);
     }
 
@@ -48,6 +49,7 @@ public class ReqresTest {
                 .when()
                 .get("/unknown")
                 .then()
+                .spec(reqresResponseSpec)
                 .statusCode(200)
                 .body(matchesJsonSchemaInClasspath("schemas/list_resource_schema"));
     }
@@ -80,6 +82,7 @@ public class ReqresTest {
                 .when()
                 .delete("/users/2")
                 .then()
+                .spec(reqresResponseSpec)
                 .statusCode(204);
 
     }
