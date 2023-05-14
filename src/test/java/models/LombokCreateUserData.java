@@ -6,5 +6,6 @@ import lombok.Data;
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LombokCreateUserData {
-    String name, job, createdAt, id;
+    String name, job, createdAt;
+    Integer id;
 }
